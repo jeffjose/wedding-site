@@ -2,11 +2,18 @@
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Rotobo" rel="stylesheet">
 <style>
+
+    @font-face {
+        font-family: 'Delicious Adventures';
+        src: url("Delicious Adventures.ttf");
+    }
     body,
     html {
         height: 100%;
         padding: 0px;
         margin: 0px;
+        font-family: 'Roboto', sans-serif;
+        color: hsla(0, 0%, 38%, 1);
     }
 
     .cover {
@@ -21,27 +28,27 @@
     }
 
     .image2 {
-        background-color: #DEF2E6;
+        background-color: #F75F72;
     }
 
     .image3 {
-        background-color: #FEDCBA;
+        background-color: #B0A1BA;
     }
 
     .image4 {
-        background-color: #F9D5D5;
+        background-color: #9AC4F8;
     }
 
     .image5 {
-        background-color: #BABCDE;
+        background-color: #99EDCC;
     }
 
     .names {
-        padding: 20px 20px 0px 20px;
+        padding: 30px 20px 0px 20px;
         font-family: 'Playfair Display', serif;
         color: white;
-        font-size: 45px;
-        width: 350px;
+        font-size: 3em;
+        width: 400px;
         text-align: center;
         line-height: 52px;
         letter-spacing: 4px;
@@ -50,17 +57,45 @@
     .menu {
         padding: 10px 20px 0px 20px;
         color: white;
-        font-family: 'Roboto', sans-serif;
         text-align: center;
-        width: 350px;
+        width: 400px;
     }
 
     .menu .item {
         margin: 10px;
     }
+
     .menu .item:hover span {
-        border-bottom: 3px solid #B6D8C0;
+        border-bottom: 3px solid #829AC9;
         cursor: pointer;
+    }
+
+    .cover .header {
+        text-align: center;
+        padding: 22px 0px 0px 0px;
+        font-size: 5em;
+        font-family: 'Delicious Adventures';
+        color: hsla(0, 0%, 100%, 1);
+    }
+
+    .page {
+    }
+
+    .page .container {
+        padding: 10px;
+        background-color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .container .left {
+        background-color: red;
+    }
+    .container .right {
+        background-color: blue;
     }
 </style>
 
@@ -77,17 +112,44 @@
             <div>JEFFREY JOSE</div>
         </div>
         <div class="menu">
-            <div class="item"><span>About us</span></div>
-            <div class="item"><span>Schedule</span></div>
-            <div class="item"><span>Traveling to San Francisco?</span></div>
-            <div class="item"><span>Contact</span></div>
+            <div class="item">
+                <span>About us</span>
+            </div>
+            <div class="item">
+                <span>Schedule</span>
+            </div>
+            <div class="item">
+                <span>Traveling to San Francisco?</span>
+            </div>
+            <div class="item">
+                <span>Photos</span>
+            </div>
+            <div class="item">
+                <span>Contact</span>
+            </div>
         </div>
     </div>
 
-    <div class="cover image2"></div>
-    <div class="cover image3"></div>
-    <div class="cover image4"></div>
-    <div class="cover image5"></div>
+    <div class="page cover image2">
+        <div class="header">about us</div>
+                <div class="container">
+                    <div class="left"> foo </div>
+                    <div class="right"> bar </div>
+                </div>
+    </div>
+
+    <div class="page cover image3">
+        <div class="header">schedule</div>
+    </div>
+    <div class="page cover image4">
+        <div class="header">traveling to san francisco?</div>
+    </div>
+    <div class="page cover image5">
+        <div class="header">photos</div>
+    </div>
+    <div class="page cover image2">
+        <div class="header">contact</div>
+    </div>
 </body>
 
 </html>
