@@ -23,6 +23,9 @@
         background-size: cover;
     }
 
+    .image0 {
+        background-color: white;
+    }
     .image1 {
         background-image: url(cover.jpg);
     }
@@ -32,7 +35,7 @@
     }
 
     .image3 {
-        //background-color: #B0A1BA;
+        background-color: #B0A1BA;
     }
 
     .image4 {
@@ -64,6 +67,11 @@
     .menu .item {
         margin: 10px;
     }
+    .menu .item a{
+      text-decoration: none;
+        color: white;
+    }
+
 
     .menu .item:hover span {
         border-bottom: 3px solid #829AC9;
@@ -77,6 +85,7 @@
         font-family: 'Delicious Adventures';
         color: hsla(0, 0%, 100%, 1);
         height: 10vh;
+          margin-bottom: 10px;
     }
 
     .page {}
@@ -106,14 +115,14 @@
         background-color: rgba(255, 255, 255, 0.1);
           border: 1px solid #829AC9;
         height: auto;
-        width: 30%;
+        width: 29%;
         border-radius: 20px;
         padding-top: 30px;
     }
 
 
     .event {
-        margin: 30px 0px;
+        margin: 20px 0px 30px 0px;
         padding: 30px 0px;
         color: #4c4c4c;
     }
@@ -126,7 +135,7 @@
     .minievent {
         color: #4c4c4c;
         font-size: 12px;
-
+        margin: 20px 0px;
     }
 
     .minievent:hover {}
@@ -178,29 +187,29 @@
         </div>
         <div class="menu">
             <div class="item">
-                <span>About us</span>
+              <span><a href="#schedule">Schedule</a></span>
             </div>
             <div class="item">
-                <span>Schedule</span>
+              <span><a href="#aboutus">About us</a></span>
             </div>
             <div class="item">
-                <span>Traveling to San Francisco?</span>
+              <span><a href="#travel">Traveling to San Francisco?</a></span>
             </div>
             <div class="item">
-                <span>Photos</span>
+              <span><a href="#photos">Photos</a></span>
             </div>
             <div class="item">
-                <span>Contact</span>
+              <span><a href="#contact">Contact</a></span>
             </div>
         </div>
     </div>
 
-    <div class="page cover image3 schedule">
+    <div id="schedule" class="page cover image0 schedule">
         <div class="header">schedule</div>
         <div class="container">
             <div class="center">
                 <div class="band">
-                    Saturday, January 19, 2019
+                    Saturday · January 19, 2019
                 </div>
                 <center>
                     <div class="event">
@@ -208,7 +217,7 @@
                         <img class="wedding_icon" src="wedding2.png"></img>
                       </div>
                       <div class="details">
-                        <div class="name">Wedding</div>
+                        <div class="name">Ceremony</div>
                         <div>2pm - 3:30pm</div>
                         <div>St. Paul's Church, San Francisco</div>
                       </div>
@@ -231,8 +240,13 @@
                         </div>
                     </div>
                 </center>
+                <center>
+                    <div class="minievent">
+                        <div>Buses to San Franscisco will run every half-hour from 9pm till 11pm</div>
+                    </div>
+                </center>
                 <div class="band">
-                    Sunday, January 20, 2019
+                    Sunday · January 20, 2019
                 </div>
                 <center>
                     <div class="event">
@@ -250,21 +264,23 @@
         </div>
     </div>
 
-    <div class="page cover image2">
+    <div id="aboutus" class="page cover image3 aboutus">
         <div class="header">about us</div>
+        <!--
         <div class="container">
             <div class="left"> foo </div>
             <div class="right"> bar </div>
         </div>
+        -->
     </div>
 
-    <div class="page cover image4">
+    <div id="travel" class="page cover image4 travel">
         <div class="header">traveling to san francisco?</div>
     </div>
-    <div class="page cover image5">
+    <div id="photos" class="page cover image5 photos">
         <div class="header">photos</div>
     </div>
-    <div class="page cover image2">
+    <div id="contact" class="page cover image2 contact">
         <div class="header">contact</div>
     </div>
 </body>
