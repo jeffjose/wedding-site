@@ -26,6 +26,7 @@
     .image0 {
         background-color: white;
     }
+
     .image1 {
         background-image: url(cover.jpg);
     }
@@ -67,8 +68,9 @@
     .menu .item {
         margin: 10px;
     }
-    .menu .item a{
-      text-decoration: none;
+
+    .menu .item a {
+        text-decoration: none;
         color: white;
     }
 
@@ -85,7 +87,7 @@
         font-family: 'Delicious Adventures';
         color: hsla(0, 0%, 100%, 1);
         height: 10vh;
-          margin-bottom: 10px;
+        margin-bottom: 10px;
     }
 
     .page {}
@@ -99,27 +101,18 @@
         height: 80vh;
     }
 
-    .container .left {
-        background-color: white;
+    .container .profile {
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 10px;
         height: auto;
         width: 100%;
-    }
-
-    .container .right {
-        background-color: white;
-        height: auto;
-        width: 100%;
+        border-radius: 20px;
     }
 
     .container .center {
-        background-color: rgba(255, 255, 255, 0.1);
-          border: 1px solid #829AC9;
         height: auto;
-        width: 29%;
         border-radius: 20px;
-        padding-top: 30px;
     }
-
 
     .event {
         margin: 20px 0px 30px 0px;
@@ -145,32 +138,49 @@
         margin-bottom: 8px;
     }
 
-.schedule .header {
+    .schedule .header {
         color: #829AC9;
-}
+    }
+
+    .schedule .contents {
+        border: 1px solid #829AC9;
+        width: 29%;
+        padding-top: 30px;
+    }
 
     .schedule .band {
         height: 30px;
         background-color: rgba(0, 0, 0, 0.1);
         background-color: #829AC9;
-          color: white;
+        color: white;
         text-align: center;
         vertical-align: middle;
         padding-top: 13px;
         text-transform: uppercase;
-          font-size: 14px;
+        font-size: 14px;
     }
 
     .icon img {
         width: 5em;
         float: left;
-      margin-left: 7em;
+        margin-left: 7em;
     }
 
     .event .details {
-      margin-right: 5em;
+        margin-right: 5em;
     }
 
+    .aboutus .contents {
+      background-color: white;
+        width: 100%;
+    }
+
+    .aboutus .contents .image {
+      background-image: url("cover.jpg");
+        height: 100%;
+        width: 50%;
+        float: left;
+    }
 </style>
 
 <head>
@@ -187,19 +197,29 @@
         </div>
         <div class="menu">
             <div class="item">
-              <span><a href="#schedule">Schedule</a></span>
+                <span>
+                    <a href="#schedule">Schedule</a>
+                </span>
             </div>
             <div class="item">
-              <span><a href="#aboutus">About us</a></span>
+                <span>
+                    <a href="#aboutus">About us</a>
+                </span>
             </div>
             <div class="item">
-              <span><a href="#travel">Traveling to San Francisco?</a></span>
+                <span>
+                    <a href="#travel">Traveling to San Francisco?</a>
+                </span>
             </div>
             <div class="item">
-              <span><a href="#photos">Photos</a></span>
+                <span>
+                    <a href="#photos">Photos</a>
+                </span>
             </div>
             <div class="item">
-              <span><a href="#contact">Contact</a></span>
+                <span>
+                    <a href="#contact">Contact</a>
+                </span>
             </div>
         </div>
     </div>
@@ -207,20 +227,20 @@
     <div id="schedule" class="page cover image0 schedule">
         <div class="header">schedule</div>
         <div class="container">
-            <div class="center">
+            <div class="center contents">
                 <div class="band">
                     Saturday · January 19, 2019
                 </div>
                 <center>
                     <div class="event">
-                      <div class="icon">
-                        <img class="wedding_icon" src="wedding2.png"></img>
-                      </div>
-                      <div class="details">
-                        <div class="name">Ceremony</div>
-                        <div>2pm - 3:30pm</div>
-                        <div>St. Paul's Church, San Francisco</div>
-                      </div>
+                        <div class="icon">
+                            <img class="wedding_icon" src="wedding2.png"></img>
+                        </div>
+                        <div class="details">
+                            <div class="name">Ceremony</div>
+                            <div>2pm - 3:30pm</div>
+                            <div>St. Paul's Church, San Francisco</div>
+                        </div>
                     </div>
                 </center>
                 <center>
@@ -230,13 +250,13 @@
                 </center>
                 <center>
                     <div class="event">
-                      <div class="icon">
-                        <img class="reception_icon" src="reception3.png"></img>
+                        <div class="icon">
+                            <img class="reception_icon" src="reception3.png"></img>
                         </div>
-                      <div class="details">
-                        <div class="name">Reception</div>
-                        <div>5:30pm - 11:00pm</div>
-                        <div>Chabot Space Center, Oakland</div>
+                        <div class="details">
+                            <div class="name">Reception</div>
+                            <div>5:30pm - 11:00pm</div>
+                            <div>Chabot Space Center, Oakland</div>
                         </div>
                     </div>
                 </center>
@@ -250,13 +270,13 @@
                 </div>
                 <center>
                     <div class="event">
-                      <div class="icon">
-                        <img class="wine_icon" src="wine2.png"></img>
-                      </div>
-                      <div class="details">
-                        <div class="name">Napa Wine Bus (optional) </div>
-                        <div>11:00am</div>
-                        <div>TBD</div>
+                        <div class="icon">
+                            <img class="wine_icon" src="wine2.png"></img>
+                        </div>
+                        <div class="details">
+                            <div class="name">Napa Wine Bus (optional) </div>
+                            <div>11:00am</div>
+                            <div>TBD</div>
                         </div>
                     </div>
                 </center>
@@ -266,12 +286,28 @@
 
     <div id="aboutus" class="page cover image3 aboutus">
         <div class="header">about us</div>
-        <!--
         <div class="container">
-            <div class="left"> foo </div>
-            <div class="right"> bar </div>
+          <!--
+            <div class="profile left">
+                <center>
+                    <img src="angelaying.png"></img>
+                    <div>Angela Ying</div>
+                </center>
+            </div>
+            <div class="profile right">
+                <center>
+                    <img src="jeffjose.png"></img>
+                    <div>Jeffrey Jose</div>
+            </div>
+            </center>
+            -->
+
+            <div class="center contents">
+              <span class="image">
+              </span>
+              <div></div>
+</div>
         </div>
-        -->
     </div>
 
     <div id="travel" class="page cover image4 travel">
