@@ -2,11 +2,11 @@
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Rotobo" rel="stylesheet">
 <style>
-
     @font-face {
         font-family: 'Delicious Adventures';
         src: url("Delicious Adventures.ttf");
     }
+
     body,
     html {
         height: 100%;
@@ -24,7 +24,7 @@
     }
 
     .image1 {
-        background: url(cover.jpg);
+        background-image: url(cover.jpg);
     }
 
     .image2 {
@@ -32,7 +32,7 @@
     }
 
     .image3 {
-        background-color: #B0A1BA;
+        //background-color: #B0A1BA;
     }
 
     .image4 {
@@ -76,27 +76,92 @@
         font-size: 5em;
         font-family: 'Delicious Adventures';
         color: hsla(0, 0%, 100%, 1);
+        height: 10vh;
     }
 
-    .page {
-    }
+    .page {}
 
     .page .container {
-        padding: 10px;
-        background-color: white;
-        height: 100%;
+        padding: 10px; //background-color: white;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: stretch;
+        height: 80vh;
     }
 
     .container .left {
-        background-color: red;
+        background-color: white;
+        height: auto;
+        width: 100%;
     }
+
     .container .right {
-        background-color: blue;
+        background-color: white;
+        height: auto;
+        width: 100%;
     }
+
+    .container .center {
+        background-color: rgba(255, 255, 255, 0.1);
+          border: 1px solid #829AC9;
+        height: auto;
+        width: 30%;
+        border-radius: 20px;
+        padding-top: 30px;
+    }
+
+
+    .event {
+        margin: 30px 0px;
+        padding: 30px 0px;
+        color: #4c4c4c;
+    }
+
+    .event:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+
+    .minievent {
+        color: #4c4c4c;
+        font-size: 12px;
+
+    }
+
+    .minievent:hover {}
+
+    .event .name {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+.schedule .header {
+        color: #829AC9;
+}
+
+    .schedule .band {
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.1);
+        background-color: #829AC9;
+          color: white;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 13px;
+        text-transform: uppercase;
+          font-size: 14px;
+    }
+
+    .icon img {
+        width: 5em;
+        float: left;
+      margin-left: 7em;
+    }
+
+    .event .details {
+      margin-right: 5em;
+    }
+
 </style>
 
 <head>
@@ -130,17 +195,69 @@
         </div>
     </div>
 
-    <div class="page cover image2">
-        <div class="header">about us</div>
-                <div class="container">
-                    <div class="left"> foo </div>
-                    <div class="right"> bar </div>
+    <div class="page cover image3 schedule">
+        <div class="header">schedule</div>
+        <div class="container">
+            <div class="center">
+                <div class="band">
+                    Saturday, January 19, 2019
                 </div>
+                <center>
+                    <div class="event">
+                      <div class="icon">
+                        <img class="wedding_icon" src="wedding2.png"></img>
+                      </div>
+                      <div class="details">
+                        <div class="name">Wedding</div>
+                        <div>2pm - 3:30pm</div>
+                        <div>St. Paul's Church, San Francisco</div>
+                      </div>
+                    </div>
+                </center>
+                <center>
+                    <div class="minievent">
+                        <div>Buses leave at 4:30pm from St. Paul's Church, San Francisco</div>
+                    </div>
+                </center>
+                <center>
+                    <div class="event">
+                      <div class="icon">
+                        <img class="reception_icon" src="reception3.png"></img>
+                        </div>
+                      <div class="details">
+                        <div class="name">Reception</div>
+                        <div>5:30pm - 11:00pm</div>
+                        <div>Chabot Space Center, Oakland</div>
+                        </div>
+                    </div>
+                </center>
+                <div class="band">
+                    Sunday, January 20, 2019
+                </div>
+                <center>
+                    <div class="event">
+                      <div class="icon">
+                        <img class="wine_icon" src="wine2.png"></img>
+                      </div>
+                      <div class="details">
+                        <div class="name">Napa Wine Bus (optional) </div>
+                        <div>11:00am</div>
+                        <div>TBD</div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
     </div>
 
-    <div class="page cover image3">
-        <div class="header">schedule</div>
+    <div class="page cover image2">
+        <div class="header">about us</div>
+        <div class="container">
+            <div class="left"> foo </div>
+            <div class="right"> bar </div>
+        </div>
     </div>
+
     <div class="page cover image4">
         <div class="header">traveling to san francisco?</div>
     </div>
