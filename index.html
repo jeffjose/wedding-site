@@ -24,7 +24,8 @@
     }
 
     .image0 {
-        background-color: white;
+        //background-color: white;
+        background-image: url(maps.png);
     }
 
     .image1 {
@@ -116,7 +117,7 @@
 
     .event {
         padding: 30px 0px;
-                color: hsla(220, 40%, 50%, 1);
+        color: hsla(220, 40%, 50%, 1);
         width: 100%;
     }
 
@@ -126,7 +127,7 @@
 
 
     .minievent {
-                color: hsla(220, 40%, 50%, 1);
+        color: hsla(220, 40%, 47%, 1);
         font-size: 12px;
         margin: 20px 0px;
     }
@@ -138,6 +139,18 @@
         margin-bottom: 8px;
     }
 
+    .event .time {
+        color: hsla(220, 40%, 50%, 1);
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .event .location {
+        color: hsla(220, 40%, 50%, 1);
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
     .schedule .header {
         color: #829AC9;
     }
@@ -146,11 +159,12 @@
         border: 1px solid #829AC9;
         min-width: 600px;
         padding-top: 15px;
+          background-color: white;
+            opacity: 1;
     }
 
     .schedule .band {
         height: 30px;
-        background-color: rgba(0, 0, 0, 0.1);
         background-color: #829AC9;
         color: white;
         text-align: center;
@@ -161,27 +175,33 @@
     }
 
     .schedule .big_event {
-        height: 24%;
+        height: 25%;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all ease-in-out 100ms;
 
+
+    }
+
+    .schedule .big_event:hover {
+        background-color: rgba(130, 154, 201, 0.10);
     }
 
     .schedule .map_link {
-      font-size: 12px;
+        font-size: 12px;
         text-decoration: none;
-          margin-left: 4px;
-            color: rgba(130, 154, 201, 1);
+        margin-left: 4px;
+        color: rgba(130, 154, 201, 1);
     }
 
     .schedule .mini_event {
-        height: 5%;
+        height: 3%;
         display: flex;
         align-items: center;
         justify-content: center;
-          margin: 10px 0px;
-            background-color: rgba(130, 154, 201, 0.19);
+        padding: 10px 0px;
+        background-color: rgba(130, 154, 201, 0.39);
     }
 
     .icon img {
@@ -197,65 +217,93 @@
     .aboutus .contents {
         background-color: rgba(255, 255, 255, 0.2);
         width: 100%;
-          display: flex;
+        display: flex;
     }
 
     .aboutus .contents .image {
         background-image: url("aboutus.jpg");
-background-repeat: no-repeat;
-background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
         height: 100%;
         width: 25%;
         float: left;
-          background-position: center;
+        background-position: center;
     }
 
     .aboutus .text {
-      width: 50%;
+        width: 50%;
         margin: auto;
     }
 
     .aboutus .text div {
-      margin: 20px 0px;
+        margin: 20px 0px;
         color: hsla(276, 15%, 30%, 1);
     }
 
     .travel .contents {
         background-color: rgba(255, 255, 255, 0.2);
         width: 100%;
-          display: flex;
+        display: flex;
     }
 
     .travel .contents .image {
         background-image: url("sf.jpg");
-background-repeat: no-repeat;
-background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
         height: 100%;
         width: 848px;
         float: right;
-          max-width: 50%;
+        max-width: 50%;
     }
 
     .travel .text {
-      width: 30%;
+        width: 30%;
         margin: auto;
     }
 
     .travel .text .head {
         text-align: center;
-          font-size: 24px;
-            color: hsla(213, 87%, 47%, 1);
-                margin-top: 60px;
-                margin-bottom: 10px;
+        font-size: 24px;
+        color: hsla(213, 87%, 47%, 1);
+        margin-top: 60px;
+        margin-bottom: 10px;
     }
 
     .travel .text .body {
-      margin: 20px 0px;
+        margin: 20px 0px;
         text-align: center;
-            color: hsla(213, 87%, 47%, 1);
-              font-style: italic;
+        color: hsla(213, 87%, 47%, 1);
+        font-style: italic;
     }
 
+    .photos .contents {
+        width: 100%;
+        display: flex;
+        color: hsla(156, 70%, 25%, 1);
+    }
+
+    .photos .text {
+        margin: auto;
+          font-style: italic;
+    }
+
+    .photos .text div {
+        margin: 30px 0px;
+    }
+
+    .contact .contents {
+        width: 100%;
+        display: flex;
+        color: white;
+    }
+
+    .contact .text {
+        margin: auto;
+    }
+
+    .contact .text div {
+        margin: 30px 0px;
+    }
 </style>
 
 <head>
@@ -313,8 +361,10 @@ background-size: cover;
                         </div>
                         <div class="details">
                             <div class="name">Ceremony</div>
-                            <div>2pm - 3:30pm</div>
-                            <div>St. Paul's Church, San Francisco<a class="map_link" target="_blank" href="https://goo.gl/maps/hf41hbX3tkx">(map)</a></div>
+                            <div class="time">2pm - 3:30pm</div>
+                            <div class="location">St. Paul's Church, San Francisco
+                                <a class="map_link" target="_blank" href="https://goo.gl/maps/hf41hbX3tkx">(map)</a>
+                            </div>
                         </div>
                     </div>
                 </center>
@@ -330,8 +380,10 @@ background-size: cover;
                         </div>
                         <div class="details">
                             <div class="name">Reception</div>
-                            <div>5:30pm - 11:00pm</div>
-                            <div>Chabot Space Center, Oakland<a class="map_link" target="_blank" href="https://goo.gl/maps/hG3nEfhdTL12">(map)</a></div>
+                            <div class="time">5:30pm - 11:00pm</div>
+                            <div class="location">Chabot Space Center, Oakland
+                                <a class="map_link" target="_blank" href="https://goo.gl/maps/hG3nEfhdTL12">(map)</a>
+                            </div>
                         </div>
                     </div>
                 </center>
@@ -350,8 +402,8 @@ background-size: cover;
                         </div>
                         <div class="details">
                             <div class="name">Napa Wine Bus (optional) </div>
-                            <div>11:00am</div>
-                            <div>TBD</div>
+                            <div class="time">11:00am</div>
+                            <div class="location">TBD</div>
                         </div>
                     </div>
                 </center>
@@ -366,9 +418,22 @@ background-size: cover;
                 <span class="image">
                 </span>
                 <div class="text">
-                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-              </div>
+                  <!--
+                    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                        -->
+                        <div>Angela and Jeff's story!</div>
+                </div>
             </div>
         </div>
     </div>
@@ -378,14 +443,14 @@ background-size: cover;
         <div class="container">
             <div class="center contents">
                 <div class="text">
-                <div class="head">RSVP</div>
-                <div class="body">Coming soon</div>
-                <div class="head">Where to stay</div>
-                <div class="body">Coming soon</div>
-                <div class="head">Where to see</div>
-                <div class="body">Coming soon</div>
-                <div class="head">What to see</div>
-                <div class="body">Coming soon</div>
+                    <div class="head">RSVP</div>
+                    <div class="body">Coming soon</div>
+                    <div class="head">Where to stay</div>
+                    <div class="body">Coming soon</div>
+                    <div class="head">Where to see</div>
+                    <div class="body">Coming soon</div>
+                    <div class="head">What to see</div>
+                    <div class="body">Coming soon</div>
                 </div>
                 <span class="image"></span>
             </div>
@@ -393,9 +458,26 @@ background-size: cover;
     </div>
     <div id="photos" class="page cover image5 photos">
         <div class="header">photos</div>
+        <div class="container">
+            <div class="center contents">
+                <div class="text">
+                    <div>Coming soon</div>
+                </div>
+                <span class="image"></span>
+            </div>
+        </div>
     </div>
     <div id="contact" class="page cover image2 contact">
         <div class="header">contact</div>
+        <div class="container">
+            <div class="center contents">
+                <div class="text">
+                    <div>wedding@jeffreyjose.com</div>
+                    <div>wedding@angelaying.com</div>
+                </div>
+                <span class="image"></span>
+            </div>
+        </div>
     </div>
 </body>
 
