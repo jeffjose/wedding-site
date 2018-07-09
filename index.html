@@ -87,7 +87,7 @@
         font-family: 'Delicious Adventures';
         color: hsla(0, 0%, 100%, 1);
         height: 10vh;
-        margin-bottom: 10px;
+        margin-bottom: 33px;
     }
 
     .page {}
@@ -161,11 +161,18 @@
     }
 
     .schedule .big_event {
-        height: 25%;
+        height: 24%;
         display: flex;
         align-items: center;
         justify-content: center;
 
+    }
+
+    .schedule .map_link {
+      font-size: 12px;
+        text-decoration: none;
+          margin-left: 4px;
+            color: rgba(130, 154, 201, 1);
     }
 
     .schedule .mini_event {
@@ -188,16 +195,67 @@
     }
 
     .aboutus .contents {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.2);
         width: 100%;
+          display: flex;
     }
 
     .aboutus .contents .image {
-        background-image: url("cover.jpg");
+        background-image: url("aboutus.jpg");
+background-repeat: no-repeat;
+background-size: cover;
         height: 100%;
-        width: 50%;
+        width: 25%;
         float: left;
+          background-position: center;
     }
+
+    .aboutus .text {
+      width: 50%;
+        margin: auto;
+    }
+
+    .aboutus .text div {
+      margin: 20px 0px;
+        color: hsla(276, 15%, 30%, 1);
+    }
+
+    .travel .contents {
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 100%;
+          display: flex;
+    }
+
+    .travel .contents .image {
+        background-image: url("sf.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+        height: 100%;
+        width: 848px;
+        float: right;
+          max-width: 50%;
+    }
+
+    .travel .text {
+      width: 30%;
+        margin: auto;
+    }
+
+    .travel .text .head {
+        text-align: center;
+          font-size: 24px;
+            color: hsla(213, 87%, 47%, 1);
+                margin-top: 60px;
+                margin-bottom: 10px;
+    }
+
+    .travel .text .body {
+      margin: 20px 0px;
+        text-align: center;
+            color: hsla(213, 87%, 47%, 1);
+              font-style: italic;
+    }
+
 </style>
 
 <head>
@@ -256,7 +314,7 @@
                         <div class="details">
                             <div class="name">Ceremony</div>
                             <div>2pm - 3:30pm</div>
-                            <div>St. Paul's Church, San Francisco</div>
+                            <div>St. Paul's Church, San Francisco<a class="map_link" target="_blank" href="https://goo.gl/maps/hf41hbX3tkx">(map)</a></div>
                         </div>
                     </div>
                 </center>
@@ -273,7 +331,7 @@
                         <div class="details">
                             <div class="name">Reception</div>
                             <div>5:30pm - 11:00pm</div>
-                            <div>Chabot Space Center, Oakland</div>
+                            <div>Chabot Space Center, Oakland<a class="map_link" target="_blank" href="https://goo.gl/maps/hG3nEfhdTL12">(map)</a></div>
                         </div>
                     </div>
                 </center>
@@ -304,31 +362,34 @@
     <div id="aboutus" class="page cover image3 aboutus">
         <div class="header">about us</div>
         <div class="container">
-            <!--
-            <div class="profile left">
-                <center>
-                    <img src="angelaying.png"></img>
-                    <div>Angela Ying</div>
-                </center>
-            </div>
-            <div class="profile right">
-                <center>
-                    <img src="jeffjose.png"></img>
-                    <div>Jeffrey Jose</div>
-            </div>
-            </center>
-            -->
-
             <div class="center contents">
                 <span class="image">
                 </span>
-                <div></div>
+                <div class="text">
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+              </div>
             </div>
         </div>
     </div>
 
     <div id="travel" class="page cover image4 travel">
         <div class="header">traveling to san francisco?</div>
+        <div class="container">
+            <div class="center contents">
+                <div class="text">
+                <div class="head">RSVP</div>
+                <div class="body">Coming soon</div>
+                <div class="head">Where to stay</div>
+                <div class="body">Coming soon</div>
+                <div class="head">Where to see</div>
+                <div class="body">Coming soon</div>
+                <div class="head">What to see</div>
+                <div class="body">Coming soon</div>
+                </div>
+                <span class="image"></span>
+            </div>
+        </div>
     </div>
     <div id="photos" class="page cover image5 photos">
         <div class="header">photos</div>
