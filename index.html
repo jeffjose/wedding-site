@@ -51,11 +51,11 @@
     }
 
     .names {
-        padding: 30px 20px 0px 20px;
+        padding: 30px 0px 0px 0px;
         font-family: 'Playfair Display', serif;
         color: white;
         font-size: 3em;
-        width: 400px;
+        max-width: 8.5em;
         text-align: center;
         line-height: 52px;
         letter-spacing: 4px;
@@ -65,7 +65,7 @@
         padding: 10px 20px 0px 20px;
         color: white;
         text-align: center;
-        width: 400px;
+        max-width: 23em;
     }
 
     .menu .item {
@@ -159,7 +159,7 @@
 
     .schedule .contents {
         border: 1px solid #829AC9;
-        min-width: 600px;
+        width: 37em;
         padding-top: 15px;
           background-color: white;
             opacity: 1;
@@ -207,7 +207,7 @@
     }
 
     .icon img {
-        width: 5em;
+        max-width: 5em;
         float: left;
         margin-left: 4em;
     }
@@ -215,7 +215,10 @@
     .event .details {
         margin-right: 5em;
     }
-
+    .event .details .optional{
+      font-style: italic;
+      font-size: 0.5em;
+    }
     .aboutus .contents {
         background-color: rgba(255, 255, 255, 0.2);
         width: 100%;
@@ -403,7 +406,7 @@
                             <img class="wine_icon" src="wine2.png"></img>
                         </div>
                         <div class="details">
-                            <div class="name">Napa Wine Bus (optional) </div>
+                          <div class="name">Napa Wine Bus <span class="optional">(Optional)</span></div>
                             <div class="time">11:00am</div>
                             <div class="location">TBD</div>
                         </div>
